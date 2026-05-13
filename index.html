@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
     <link rel="icon" href="./assets/logo-C_QQpFK1.svg" type="image/svg+xml" />
-    <script type="module" crossorigin src="./assets/index-De26MKeW.js"></script>
+    <script type="module" crossorigin src="./assets/index-DnQZnJYe.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DQ3UpsaF.css">
   </head>
   <body class="page">
@@ -53,7 +53,8 @@
                 placeholder="Имя"
                 minlength="2"
                 maxlength="40"
-                pattern="[A-Za-zА-Яа-яЁё\s-]+"
+                pattern="[\p{Script=Latin}\p{Script=Cyrillic}\s\x2d]+"
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
                 required
               />
               <span class="popup__error user-name-error"></span>
@@ -92,7 +93,8 @@
                 placeholder="Название"
                 minlength="2"
                 maxlength="30"
-                pattern="[A-Za-zА-Яа-яЁё\s-]+"
+                pattern="[\p{Script=Latin}\p{Script=Cyrillic}\s\x2d]+"
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
                 required
               />
               <span class="popup__error place-name-error"></span>
